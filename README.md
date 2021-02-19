@@ -21,3 +21,62 @@ The API gives a date or date (utc). Since it is a rocket launch i would like to 
 Add details about launchpad used, type of rocket etc.
 
 
+### Code
+
+#### Promise all experiment
+
+In the first week i tried getting all the API data in one call since i didn't know wich data i wanted to use. I tried this with a promise all and saving all the endpoints in an object array. This worked but the data came back in one large object and it was difficult to filter trough. Later i opted for a simpler solution wich requires me to make calls again if i want new data
+
+What i tried first:
+
+```
+const endpoints = {
+  "capsules" : "https://api.spacexdata.com/v4/capsules",
+  "company" : "https://api.spacexdata.com/v4/company",
+    "https://api.spacexdata.com/v4/cores",
+    "https://api.spacexdata.com/v4/crew",
+    "https://api.spacexdata.com/v4/dragons",
+    "https://api.spacexdata.com/v4/landpads",
+    "https://api.spacexdata.com/v4/launches",
+    "https://api.spacexdata.com/v4/launchpads",
+    "https://api.spacexdata.com/v4/payloads",
+    "https://api.spacexdata.com/v4/fairings",
+    "https://api.spacexdata.com/v4/roadster",
+    "https://api.spacexdata.com/v4/rockets",
+    "https://api.spacexdata.com/v4/ships",
+    "https://api.spacexdata.com/v4/starlink",
+    "https://api.spacexdata.com/v4/history"
+}
+
+// console.log(endpoints);
+
+Promise.all(Object.keys(endpoints).map(key => {
+  let endpoint = endpoints[key];
+fetch(endpoint)
+  .then(response => response.json())
+  // .then(data => console.log(data));
+  .then(data => changeUI(data, key))
+}))
+
+let objectArray = {}
+
+function changeUI(data, key) {
+  objectArray[key] = data
+  console.log(objectArray);
+}
+```
+
+how it is now:
+
+```
+function getData(endpoint) {
+  const url = 'https://api.spacexdata.com/v4/';
+  const request = `${url}${endpoint}`;
+
+  return fetch(request)
+    .then(response => response.json())
+    .catch(err => {
+      console.log(err);
+    });
+}
+```
