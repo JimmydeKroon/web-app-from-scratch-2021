@@ -28,7 +28,7 @@ Request limit information: 50 requests per second.
 ## features
 
 ### Countdown timer
-![home](docs/img/Home.gif "Home countdown")
+![home](docs/img/home.gif "Home countdown")
 
 The API gives a date or date (utc). Since it is a rocket launch i turned the dat into a countdown timer, her is how i did that:
 ```JS
