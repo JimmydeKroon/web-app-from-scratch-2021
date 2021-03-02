@@ -2,19 +2,11 @@ import { getData } from './api.js'
 import './routie.min.js'
 
 import Home from './pages/home.js'
-import Launch from './pages/launch.js'
+import Launchdetails from './pages/launchdetails.js'
 
 function handleRoutes() {
 
-  console.log('handleRoutes');
-
-  function clearElement(node) {
-    while (node.firstChild) {
-      node.removeChild(node.lastChild);
-    }
-  }
-
-  const main = document.querySelector('.main')
+  const main = document.querySelector('.main');
 
   routie({
     '': () => {
@@ -28,10 +20,16 @@ function handleRoutes() {
     'details/:id': (id) => {
 
       clearElement(main);
-      Launch(id);
+      Launchdetails(id);
   
-    }
+    }  
   })
+
+  function clearElement(node) {
+    while (node.firstChild) {
+      node.removeChild(node.lastChild);
+    }
+  }
 
 }
 

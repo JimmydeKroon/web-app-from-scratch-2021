@@ -28,6 +28,8 @@ p {
   filter: grayscale(75%) brightness(75%);
 }
 
+/* countdown/home page */
+
 .countdown-title {
   text-align: center;
   padding-top: 200px;
@@ -94,3 +96,135 @@ p {
   font-family: 'Open sans';
   font-weight: 900;
 }
+
+.linkshelper {
+  font-size: 4em;
+  color: rgb(135, 135, 135);
+  position: absolute;
+  right: 200px;
+  bottom: 240px;
+  transform: rotate(20deg);
+}
+
+.linkshelper-text {
+  font-size: 1.15em;
+  font-family: 'Open sans';
+  color: rgb(135, 135, 135);
+  position: absolute;
+  right: 270px;
+  bottom: 240px;
+  width: 200px;
+}
+
+/* details page */
+
+.details-title {
+  text-align: center;
+  padding-top: 100px;
+  color: #ffffff;
+  font-family: 'Open sans';
+  font-size: 3.5em;
+}
+
+.details-description {
+  text-align: center;
+  padding-top: 50px;
+  color: #dddddd;
+  font-family: 'Open sans';
+  font-size: 1.2em;
+  max-width: 40%;
+  margin: 0 auto;
+}
+
+.extrainfo {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.launchpadinfo {
+  width: 450px;
+  background-color: #fff;
+  opacity: 0.8;
+  padding: 15px;
+  margin-right: 150px;
+  font-family: 'Open sans';
+  font-size: 0.9em;
+  border-radius: 100px 100px;
+}
+
+.payloadinfo {
+  width: 450px;
+  background-color: #fff;
+  opacity: 0.8;
+  padding: 15px;
+  font-family: 'Open sans';
+  font-size: 0.9em;
+  border-radius: 100px 100px;
+}
+
+.payloadinfo img {
+  float: right;
+  border-radius: 50%;
+  margin-right: 30px;
+}
+
+.launchpadinfo img {
+  float: left;
+  border-radius: 50%;
+  margin-right: 30px;
+}
+
+.payloadinfo img {
+  float: left;
+}
+
+.launchpad-img {
+  width: 150px;
+  height: 150px;
+}
+
+.payload-img {
+  width: 150px;
+  height: 150px;
+}
+
+.details-countdown {
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 150px;
+  color: #fff;
+  font-family: 'Open sans';
+  font-size: 4em;
+  display: flex;
+  justify-content: center;
+}
+
+.backbutton {
+  font-size: 3em;
+  position: absolute;
+  top: 112px;
+  left: 10%;
+}
+
+.backbutton a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.flightpatch-img {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  top: 112px;
+  right: 10%;
+}
+
+.hoverscale {
+  transition: transform .2s;
+}
+
+.hoverscale:hover {
+  transform: scale(1.08);
+}
+

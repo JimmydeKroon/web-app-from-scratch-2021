@@ -6,7 +6,7 @@ function Home() {
     .then(function(result) {
       //Place html elements for the countdown
       const main = document.querySelector(".main");
-      const addcountdown = `
+      const addCountdown = `
         <h1 class="countdown-title">The next Spacex launch is in</h1>
 
         <div class="countdown">
@@ -34,7 +34,7 @@ function Home() {
         </div>
         `;
 
-        main.insertAdjacentHTML('beforeend', addcountdown);
+        main.insertAdjacentHTML('beforeend', addCountdown);
 
       //The launchdate from spacex API
       const launchdate = new Date(result.date_utc).getTime();
@@ -85,15 +85,24 @@ function Home() {
 
     main.insertAdjacentHTML('beforeend', addLinks);
 
+    //Add linkshelper
+    
+    const addLinkshelper = `
+      <span class='linkshelper'>&#10548;</span>
+      <span class='linkshelper-text'>Watch or read up on this launch with the following links!</span>
+    `;
+
+    main.insertAdjacentHTML('beforeend', addLinkshelper);
+    
     //Add details button
     
-    const addButton = `
+    const addDetailsButton = `
     <div class="detailsbutton">
       <a href="#details/${result.id}">See launch details</a>
     </div>
     `;
 
-    main.insertAdjacentHTML('beforeend', addButton);
+    main.insertAdjacentHTML('beforeend', addDetailsButton);
 
   });
 }
