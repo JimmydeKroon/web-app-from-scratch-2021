@@ -1,5 +1,5 @@
 # Spacex upcoming launch app
-![home](docs/img/Home.gif "Home countdown")
+![home](docs/img/home.gif "Home countdown")
 
 This webapp wil show the upcoming Spacex launch and details about the launch. Look at he live demo [here!](https://jimmydekroon.github.io/web-app-from-scratch-2021/src/index.html)
 
