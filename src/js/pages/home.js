@@ -104,6 +104,9 @@ function Home() {
 
     main.insertAdjacentHTML('beforeend', addDetailsButton);
 
+    const loader = document.querySelector('.loader');
+    loader.classList.add('hide-loader');
+
   });
 }
 

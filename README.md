@@ -189,7 +189,10 @@ export { handleRoutes }
 ```
 
 ## Actor diagram
-![actor-diagram](docs/img/actor-diagram.png "Home countdown")
+![actor-diagram](docs/img/actor-diagram.png "Actor diagram")
+
+## Interaction diagram
+![interaction-diagram](docs/img/interaction-diagram.png "Interaction diagram")
 
 ## Promise all experiment
 
