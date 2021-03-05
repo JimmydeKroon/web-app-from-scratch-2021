@@ -1,5 +1,5 @@
 body {
-  background-color: #1d1d1d;
+  background-color: rgb(31, 35, 41);
   margin: 0;
 }
 
@@ -14,7 +14,6 @@ p {
 .main {
   height: 100vh;
   width: 100%;
-  overflow-y: hidden;
 }
 
 .main::before {
@@ -250,3 +249,34 @@ p {
   transform: scale(1.08);
 }
 
+/* launchlist */
+
+.launchlist {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 300px;
+  width: 40%;
+  padding: 25px;
+  border-radius: 25px;
+  background: rgb(76, 43, 151);
+  font-family: 'Open sans';
+  font-size: 1.1em;
+  color: #fff;
+  transition: transform .2s;
+}
+
+.launchlist:hover {
+  transform: scale(1.1);
+}
+
+.launchlist ~ .launchlist {
+  margin-top: 50px;
+}
+
+.launchlist a {
+  text-decoration: none;
+  color: #fff;
+  margin-left: 75px;
+}

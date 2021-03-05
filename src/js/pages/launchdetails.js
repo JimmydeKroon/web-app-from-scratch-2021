@@ -139,6 +139,9 @@ function Launchdetails(id) {
 
         main.insertAdjacentHTML('beforeend', addBackButton);
 
+        const loader = document.querySelector('.loader');
+        loader.classList.add('hide-loader');
+
     })
 }
 
